@@ -1,5 +1,5 @@
 <div class="img-container">
-  <img src="/images/Mentorship.jpg" class="top-img" />
+  <img src="/images/profile.png" class="top-img" />
 </div>
 <h1 class="heading">Your Profile</h1>
 <div class="profile-container">
@@ -22,7 +22,7 @@
     <h2 class="h2p">subject(s)</h2>
     <div class="subjects-profile">
       <%for(var i = 0; i < user.subjects.length; i++){%><a
-        href="<%= user.subjects[i]%>"
+        href="/subjects/<%= user.subjects[i]%>"
         class="sub-single"
       >
         <%= user.subjects[i]%> </a
@@ -46,7 +46,7 @@
     
     <div class="article-1"><%= data[i].article.slice(0, 200) + "..." %></div>
     <div class="details-1">
-    <% let x = `specific-post/${data[i]._id}` %>
+    <% let x = `/specific-post/${data[i]._id}` %>
     <div class="username-1">In: <%= data[i].subject !== undefined ? data[i].subject : "general" %></div>
     <div class="date-1"><%= d + '/' + m + '/' + y %>
     <%= data[i].createdAt.toUTCString().slice(16) %></div>
